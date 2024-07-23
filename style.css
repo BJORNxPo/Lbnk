@@ -1,0 +1,585 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Author     : NSYS
+*/
+
+/*** Panel ***/
+.ui-panel-titlebar {
+    background-color: white;
+    border: none;
+    border-bottom: 1px solid #d7df23;
+    margin-bottom: 5px;
+    padding-bottom: 10px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}
+
+.ui-panel .ui-panel-titlebar {
+    padding-bottom: 12px;
+}
+
+.ui-panel-title {
+    color: #0c4221;
+    margin-bottom: 10px;
+}
+/*** Panel ***/
+
+/*** Data Table ***/
+.ui-datatable {
+    background-color: white;
+}
+
+.ui-datatable .ui-datatable-tablewrapper table thead tr th {
+    background-color: rgba(114, 191, 68, 0.4);
+    color: #0c4221;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ui-datatable table tr, .ui-datatable table tr td {
+    background-color:  transparent;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.ui-datatable th tr {
+    background-color: white;
+    color: #66cc99;
+}
+
+.ui-paginator {
+    background-color: #d7df23;
+}
+/*** Data Table ***/
+
+/*** Radio Button ***/
+.ui-radiobutton .ui-state-active {
+    background: #72BF44;
+}
+/*** Radio Button ***/
+
+/*** Output Label ***/
+.ui-outputlabel {
+    color: #414042;
+}
+/*** Output Label ***/
+
+/*** Tabs ***/
+.ui-tabs-nav {
+    background-color: #72BF44 ;
+}
+
+.ui-tabs-nav .ui-tabs-header {
+    background-color: #d7df23;
+}
+
+.ui-tabs-nav .ui-tabs-selected {
+    background-color: white;
+}
+
+.ui-tabs-nav .ui-tabs-selected a {
+    color: #0c4221;
+}
+/*** Tabs ***/
+
+/*** Tab Menu ***/
+.ui-tabmenu .ui-tabmenu-nav {
+    background-color: #72BF44;
+}
+
+.ui-tabmenu .ui-tabmenu-nav .ui-tabmenuitem {
+    background-color: #d7df23;
+}
+
+li.ui-tabmenuitem.ui-state-default.ui-state-active {
+    background: #ffffff;
+}
+
+li.ui-tabmenuitem.ui-state-default.ui-state-active a{
+    color: #0c4221;
+}
+/*** Tab Menu ***/
+
+.ui-datatable-odd {
+    background: none repeat scroll 0 0 #f2f5f9;
+}
+
+.ui-datatable-even {
+    background: none repeat scroll 0 0 #65cead;
+}
+
+.ui-datatable-header {
+    background: #389685;
+}
+
+/*** start css menu ***/
+#cssmenu {
+    background-color: white;
+    border-right: 2px solid #d7df23;
+}
+/* Some stylesheet reset */
+#cssmenu > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+    line-height: 1;
+}
+/* The container */
+#cssmenu > ul {
+    display: block;
+    position: relative;
+    width: 198px;
+    /* The list elements which contain the links */
+}
+#cssmenu > ul li {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+/* General link styling */
+#cssmenu > ul li a {
+    /* Layout */
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 11px 20px;
+    /* Typography */
+    font-family: "Lato",Helvetica,Arial,sans-serif;
+    color:#0c4221;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 300;
+}
+/* Rounded corners for the first link of the menu/submenus */
+#cssmenu > ul li:first-child > a {
+    border-top: 0;
+}
+/* Rounded corners for the last link of the menu/submenus */
+#cssmenu > ul li:last-child > a {
+    border-bottom: 0;
+}
+/* The hover state of the menu/submenu links */
+#cssmenu > ul li > a:hover,
+#cssmenu > ul li:hover > a {
+    color: #72BF44;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+}
+/* The arrow indicating a submenu */
+#cssmenu > ul .has-sub > a::after {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 0px;
+    height: 0px;
+    /* Creating the arrow using borders */
+    border: 4px solid transparent;
+    border-left: 4px solid #0c4221;
+}
+/* The same arrow, but with a darker color, to create the shadow effect */
+#cssmenu > ul .has-sub > a::before {
+    content: "";
+    position: absolute;
+    top: 13px;
+    right: 10px;
+    width: 0px;
+    height: 0px;
+    /* Creating the arrow using borders */
+    border: 4px solid transparent;
+    border-left: 4px solid #2d9b88;
+}
+/* Changing the color of the arrow on hover */
+#cssmenu > ul li > a:hover::after,
+#cssmenu > ul li:hover > a::after {
+    border-left: 4px solid #0c4221;
+}
+#cssmenu > ul li > a:hover::before,
+#cssmenu > ul li:hover > a::before {
+    border-left: 4px solid rgba(0, 0, 0, 0.3);
+}
+/* THE SUBMENUS */
+#cssmenu > ul ul {
+    position: absolute;
+    left: 100%;
+    top: -9999px;
+    padding-left: 5px;
+    opacity: 0;
+    width: 140px;
+    /* The fade effect, created using an opacity transition */
+    -webkit-transition: opacity 0.3s ease-in;
+    -moz-transition: opacity 0.3s ease-in;
+    transition: opacity 0.3s ease-in;
+}
+/* Showing the submenu when the user is hovering the parent link */
+#cssmenu > ul li:hover > ul {
+    top: 0px;
+    opacity: 1;
+}
+/*** end css menu ***/
+
+/*    Generated by http://www.cssportal.com    */
+
+p {
+    padding: 10px;
+}
+
+#wrapper {
+    margin: 0 auto;
+    width: 1056px;
+}
+
+#header {
+    float: left;
+    height: 106px;
+    width: 1056px;
+    background: #ffffff;
+}
+
+#content {
+    float: left;
+    background: #ffffff;
+    width: 846px;
+    padding: 5px;
+}
+
+#leftcolumn {
+    background: #ffffff;
+    border: none;
+    width: 200px;
+    float: left;
+}
+
+#contentnoleftcolumn {
+    float: left;
+    background: #ffffff;
+    width: 100%;
+    padding: 5px;
+}
+
+/*** Panel Grid ***/
+#panelDetail .ui-panelgrid-cell {
+    font-weight: bold;
+}
+
+#panelDetail .ui-panelgrid-cell label {
+    font-weight: normal;
+    color: #2d9b88;
+}
+/*** Panel Grid ***/
+
+.retail-header-style-class th.ui-state-default {
+    background: #389685;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+label {
+    font-weight: bold;
+}
+
+#mainForm h3 {
+    color: #414042;
+}
+
+.notice {
+    background-color: rgba(114, 191, 68, 0.4);
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.notice li {
+    padding-bottom: 2px;
+}
+
+html { height: 100%; }
+
+#footer {
+    display: table;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: x-small;
+    /*for additional*/
+    position: relative;
+    height: auto;
+}
+
+#footer a{
+    color: #ffff80;
+}
+
+/*Additional Footer Design*/
+#footer-login {
+    display: table;
+    width: 100%;
+    background-color: #72BF44;
+    font-size: x-small;
+    padding-top: 15px;
+    line-height: 1.4;
+}
+       
+#container-left {
+    display: inline;
+    float: left;
+    width: 50%;
+    padding-left: 15px;
+    margin-top: -9px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 10px;
+ 
+}
+.container-left-span {
+    display: flex;
+    flex-direction: row;
+    padding-left: 10px;
+}
+        
+#container-right {
+    display: inline;
+    float: right;
+    padding-right: 10px;
+    text-align: right;
+    color: #ffffff;
+    font-size: 10px;
+    position: relative;
+    bottom: 17px;
+}
+        
+.container-right-span {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 100px;
+    position: relative;
+    top: 10px;
+}
+.container-right-span1 {
+    display: flex;
+    flex-direction: row;
+    /* padding-left: 7px; */
+    position: relative;
+    top: -8px;
+    left: -65px;
+}
+
+#landbank-white {
+    float: right;    
+    margin: -50px 30px 0 0px;
+    width: 48px;
+    height: 45px;
+    top: -3px;
+    position: relative;
+}
+/*Additional Footer Design*/
+
+#container-warning {
+    display: inline;
+    float: left;
+    width: 50%;
+    margin: 10px 10px;
+    /*Additional*/
+    font-weight: bold;
+}
+
+#container-contactinfo {
+    display: inline;
+    float: right;
+    width: 46%;
+    margin: 10px 10px;
+    text-align: right;
+    /*Additional css*/
+    position: absolute;
+    bottom: 0px; 
+    right: 40px;
+    font-weight: bold;
+}
+
+/* Panel */
+#menuForm .ui-menubar {
+    border: 1px solid #d7df23;
+    margin-bottom: 10px;
+}
+
+/*Accordion*/
+.accordion ol{
+    display: none;
+    padding: 0;
+    padding-left: 18px;
+}
+.warning {
+    font-weight: bold;
+    color: red;
+}
+.warning-higlight {
+    font-weight: bold;
+}
+
+/*** login style ***/
+#login-body{
+    font-size: small;
+    margin:0;
+    padding:0;
+    line-height: 1.5em;
+    background-color: #eaeaea;
+}
+
+#login-maincontainer{
+    width: 1056px; /*Width of main container*/
+    margin: 0 auto; /*Center container on page*/
+    background-color: #ffffff;
+}
+
+#login-topsection{
+    background: #eaeaea;
+    height: 90px; /*Height of top section*/
+}
+
+#login-topsection h1{
+    margin: 0;
+    padding-top: 15px;
+    margin-bottom: -30px; 
+}
+
+#login-wrapper{
+    content: "";
+    display: table;
+    clear: both;
+    /*Additional css for acrf*/
+    margin-bottom: -55px;
+}
+
+#login-contentcolumn{
+    float: left;
+    padding: 10px 20px;
+    margin-right: 400px; /*Set right margin to RightColumnWidth*/
+}
+
+#login-rightcolumn{
+    float: left;
+    width: 400px; /*Width of right column*/
+    margin-left: -400px; /*Set left margin to -(RightColumnWidth) */
+}
+
+#login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+}
+
+#login-forex {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 50%;
+    float: right;
+    padding-right: 8%;
+    top: 35px;
+}
+
+.form {
+    position: relative;
+    z-index: 1;
+    background: #ffffff;
+    max-width: 360px;
+    margin: 0 auto 30px;
+    padding: 36px 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+    border-radius: 10px;
+}
+/*Added*/
+form#otp-form {
+    height: 326px;
+}
+
+.login-input {
+    font-family: Helvetica,Arial,sans-serif;
+    outline: 0;
+    background: #c7c8ca;
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+.login-button {
+    font-family: Helvetica,Arial,sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #d7df23 url('/resources/images/loginlogo.png') no-repeat 70px center;
+    background-size: 40px 25px; 
+    padding-left: 40px;
+    text-align: left;
+    /*background: #65cead;*/
+    width: 100%;
+    border: 0;
+    border-radius: 8px;
+    padding: 15px 15px 15px 110px;
+    color: #2d7051/*#ffffff*/;
+    font-weight: bold;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+    
+}
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input[id="login"]:hover,input[id="login"]:focus,input[id="login"]:active {
+    background:  #a9b200 url('/resources/images/loginlogo.png') no-repeat 70px center;
+    background-size: 40px 25px; 
+    color: #2d7051;
+     
+}
+.form .message {
+    margin: 15px 0 0;
+    /*color: #6d6f71;*/
+    font-size: 12px;
+    font-weight: bold;
+}
+.form .message a {
+    color: #8DCA2E;
+    text-decoration: none;
+}
+.form .register-form {
+    display: none;
+}
+.login-infolinks {
+    padding: 0px 0px;
+}
+.login-infolinks a {
+    font-size: smaller;
+    text-decoration: underline;
+    color: #0c4221;
+   
+}
+#login-welcome-msg {
+    color: #0c4221;
+    font-size: 30px;
+    padding: 15px 0px;
+}
+
+#login-welcome-img {
+    border: 3px solid #65cead;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+#login-announcement-img {
+    border: 3px solid #65cead;
+    border-radius: 10px;
+}
